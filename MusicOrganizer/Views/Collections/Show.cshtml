@@ -1,0 +1,15 @@
+@using MusicOrganizer.Models;
+
+<h3>Here are all the albums in this collection:</h3>
+
+<ol>
+@foreach (Album album in @Model["albums"])
+{
+  <li><a href='/collections/@Model["collection"].Id/albums/@album.Id'>@album.Artist</a></li>
+  <li><a href='/collections/@Model["collection"].Id/albums/@album.Id'>@album.AlbumName</a></li>
+}
+</ol>
+
+<p><a href='/collections/@Model["collection"].Id/albums/new'>Add a new album</a></p>
+<p><a href='/collections'>Return to collection list</a></p>
+<p><a href='/'>Return to Main Page</a></p>

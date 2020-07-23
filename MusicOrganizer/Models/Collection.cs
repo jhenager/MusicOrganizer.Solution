@@ -2,19 +2,19 @@ using System.Collections.Generic;
 
 namespace MusicOrganizer.Models
 {
-  public class Category
-  {
-    private static List<Category> _instances = new List<Category> {};
-    public string Name { get; set; }
+  public class Collection
+{
+    private static List<Collection> _instances = new List<Collection> {};
+    public string CollectionName { get; set; }
     public int Id { get; }
-    public List<Item> Items { get; set; }
+    public List<Album> Albums { get; set; }
 
-    public Category(string categoryName)
+    public Collection(string collectionName)
     {
-      Name = categoryName;
+      CollectionName = collectionName;
       _instances.Add(this);
       Id = _instances.Count;
-      Items = new List<Item>{};
+      Albums = new List<Album>{};
     }
 
     public static void ClearAll()
@@ -22,19 +22,19 @@ namespace MusicOrganizer.Models
       _instances.Clear();
     }
 
-    public static List<Category> GetAll()
+    public static List<Collection> GetAll()
     {
       return _instances;
     }
 
-    public static Category Find(int searchId)
+    public static Collection Find(int searchId)
     {
       return _instances[searchId-1];
     }
 
-    public void AddItem(Item item)
+    public void AddAlbum(Album album)
     {
-      Items.Add(item);
+      Albums.Add(album);
     }
   }
 }
