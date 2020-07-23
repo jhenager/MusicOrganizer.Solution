@@ -5,8 +5,7 @@
 <ol>
 @foreach (Album album in @Model["albums"])
 {
-  <li><a href='/collections/@Model["collection"].Id/albums/@album.Id'>@album.Artist</a></li>
-  <li><a href='/collections/@Model["collection"].Id/albums/@album.Id'>@album.AlbumName</a></li>
+  <li><a href='/collections/@Model["collection"].Id/albums/@album.Id'>@album.AlbumName by @album.Artist</a></li>
 }
 </ol>
 

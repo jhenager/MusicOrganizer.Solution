@@ -9,6 +9,12 @@ namespace MusicOrganizer.Controllers
       {
         return View();
       }
+
+      [Route("/album_images")]
+      public ActionResult AlbumImages()
+      {
+        return View();
+      }
     }
 
 }

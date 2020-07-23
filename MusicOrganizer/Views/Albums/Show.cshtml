@@ -1,8 +1,8 @@
-<h1>To Do List Item Details: </h1>
+<h1>Album Details: </h1>
 
-<h2>@Model["album"].Artist</h2>
 <h2>@Model["album"].AlbumName</h2>
-<h3>Category: @Model["collection"].Name</h3>
+<h2>@Model["album"].Artist</h2>
+<h3>Category: @Model["collection"].CollectionName</h3>
 
 <a href='/collections/@Model["collection"].Id/albums/new'>Add another album</a>
 <a href='/collections'>View all collections</a>

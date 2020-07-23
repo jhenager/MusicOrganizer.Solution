@@ -1,4 +1,4 @@
-@using ToDoList.Models;
+@using MusicOrganizer.Models;
 
 <h1>Collections</h1>
 
@@ -9,10 +9,11 @@
 
 @foreach (Collection collection in Model)
 {
-  <h3><a href='/collections/@collection.Id'>@collection.Name</a></h3>
+  <h3><a href='/collections/@collection.Id'>@collection.CollectionName</a></h3>
   
 }
 
+<p><a href='/collections/new'>Add a new Collection</a></p>
 <p><a href='/'>Back home</a></p>
 
 @* <link rel="stylesheet" type="text/css" href="~/css/styles.css" /> *@

@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using ToDoList.Models;
+using MusicOrganizer.Models;
 using System.Collections.Generic;
 
 namespace MusicCollection.Controllers
 {
-  public class AlbumController : Controller
+  public class AlbumsController : Controller
   {
 
     [HttpGet("/collections/{collectionId}/albums/new")]

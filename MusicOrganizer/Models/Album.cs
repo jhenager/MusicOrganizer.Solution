@@ -9,7 +9,7 @@ namespace MusicOrganizer.Models
         public int Id { get; }
         private static List<Album> _instances = new List<Album> { };
 
-        public Album(string artist, string albumName)
+        public Album(string albumName, string artist)
         {
             Artist = artist;
             AlbumName = albumName;
